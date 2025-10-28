@@ -1,6 +1,3 @@
-# book_reading_time_estimator_asg1_300827
-
-Short README:
 i)	App Name: Book Reading Time Estimator
 Description: 
 This Flutter application helps users estimate how many days it will take to finish reading a book. By entering the total number of pages, reading speed (pages per hour), and daily reading hours, the app calculates and displays the number of days needed to complete the book.
