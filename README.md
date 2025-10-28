@@ -1,16 +1,50 @@
 # book_reading_time_estimator_asg1_300827
 
-A new Flutter project.
+Short README:
+i)	App Name: Book Reading Time Estimator
+Description: 
+This Flutter application helps users estimate how many days it will take to finish reading a book. By entering the total number of pages, reading speed (pages per hour), and daily reading hours, the app calculates and displays the number of days needed to complete the book.
 
-## Getting Started
+ii)	Input: 
+-	Total number of pages
+-	Reading speed (pages per hour)
+-	Reading hours per day
 
-This project is a starting point for a Flutter application.
+Process: 
+-	The app reads all input values from the text fields and drop down button.
+-	It validates that all input values are positive numbers and that the reading hours per day are selected.
+-	It calculates total reading hours using the formula:
+totalHours = pages / speed
+-	It calculates the number of days to finish the book using the formula:
+days = totalHours / selectedHours
 
-A few resources to get you started if this is your first Flutter project:
+Output: 
+-	Displays the estimated number of days required to finish reading the book, “You will finish in 5 days”.
+-	If the input is invalid or incomplete, it shows an error message.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+iii)	Widget List Used:
+1.	Scaffold
+2.	Center
+3.	Column
+4.	Image
+5.	Text
+6.	SizedBox
+7.	AppBar
+8.	SingleChildScrollView
+9.	Container
+10.	Padding
+11.	Expanded
+12.	TextField
+13.	ElevatedButton
+14.	Row
+15.	DropdownButtonFormField
+16.	CircularProgressIndicator
+
+iv)	Basic Validation Approach
+-	Each input is parsed using double.tryParse() to safely convert text input to a number.
+-	If parsing fails (e.g. empty input or contains letter), the value defaults to 0.
+-	Before calculation, the app checks whether the total pages and reading speed inputs are greater than 0, and ensures that the reading hours per day are selected from the dropdown menu.
+-	If any invalid values exist, it shows an error message and stops the calculation.
+-	The app then resets all previous error messages and result values inside setState() before starting a new validation cycle.
+-	Only when all inputs are valid, the app proceeds to compute the result.

@@ -28,7 +28,7 @@ class _BookCalcScreenState extends State<BookCalcScreen> {
       appBar: AppBar(
         title: Text('Book Reading Time Estimator', style: TextStyle(color: Color.fromARGB(255, 1, 15, 85)),
         ),
-        backgroundColor: const Color.fromARGB(255, 128, 198, 255),
+        backgroundColor: Color.fromARGB(255, 128, 198, 255),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -44,6 +44,7 @@ class _BookCalcScreenState extends State<BookCalcScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+
                 // Total Pages
                 Row(
                   children: [
@@ -54,7 +55,7 @@ class _BookCalcScreenState extends State<BookCalcScreen> {
                         focusNode: pagesFocusNode,
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
-                          border: const OutlineInputBorder(),
+                          border: OutlineInputBorder(),
                           labelText: 'e.g. 300',
                           errorText: pagesError, // show error message when input is invalid
                         ),
@@ -91,7 +92,7 @@ class _BookCalcScreenState extends State<BookCalcScreen> {
                       child: DropdownButtonFormField<double>(
                         value: selectedHours,
                         decoration: InputDecoration(
-                          border: const OutlineInputBorder(),
+                          border: OutlineInputBorder(),
                           labelText: 'Select hours',
                           errorText: hoursError, 
                         ),
@@ -137,7 +138,7 @@ class _BookCalcScreenState extends State<BookCalcScreen> {
                 if (daysToFinish > 0)
                   Text(
                     'You will finish in $daysToFinish days',
-                      style: TextStyle( fontSize: 20, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 5, 30, 151),
+                      style: TextStyle( fontSize: 20, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 5, 30, 151),
                     ),
                   ),
               ],
